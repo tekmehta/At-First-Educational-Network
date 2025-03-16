@@ -2,30 +2,32 @@ import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import { FaCheckCircle, FaUsers, FaGraduationCap, FaGlobe } from "react-icons/fa";
+import { FaCheckCircle, FaGraduationCap, FaGlobe } from "react-icons/fa";
 
-export const metadata: Metadata = {
-  title: "About Us | Leading Education Consultancy in Nepal - At First Educational Network",
-  description: "Discover Nepal's premier education consultancy with 10+ years of experience. Our expert team has helped 1000+ students achieve their study abroad dreams with personalized guidance and support.",
-  keywords: "education consultancy nepal, study abroad experts, best consultancy kathmandu, student visa experts, education counseling nepal, career guidance nepal",
-  alternates: {
-    canonical: "https://www.atfirstedu.com/about"
-  },
-  openGraph: {
-    title: "About At First Educational Network - Premier Education Consultancy",
-    description: "Your trusted partner in international education with proven success in helping Nepalese students study abroad.",
-    url: "https://www.atfirstedu.com/about",
-    type: "website",
-    images: [
-      {
-        url: "images/bulding-5907451.jpg",
-        width: 1200,
-        height: 630,
-        alt: "At First Educational Network Team"
-      }
-    ]
-  }
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "About Us | Leading Education Consultancy in Nepal - At First Educational Network",
+    description: "Discover Nepal's premier education consultancy with 10+ years of experience. Our expert team has helped 1000+ students achieve their study abroad dreams with personalized guidance and support.",
+    keywords: "education consultancy nepal, study abroad experts, best consultancy kathmandu, student visa experts, education counseling nepal, career guidance nepal",
+    alternates: {
+      canonical: "https://www.atfirstedu.com/about"
+    },
+    openGraph: {
+      title: "About At First Educational Network - Premier Education Consultancy",
+      description: "Your trusted partner in international education with proven success in helping Nepalese students study abroad.",
+      url: "https://www.atfirstedu.com/about",
+      type: "website",
+      images: [
+        {
+          url: "/about-og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "At First Educational Network Team"
+        }
+      ]
+    }
+  };
+}
 
 export default function About() {
   return (
@@ -39,7 +41,7 @@ export default function About() {
             Your Trusted Partner in International Education
           </h1>
           <p className="text-xl text-white/90 max-w-2xl">
-            With over a decade of experience, we've helped thousands of students achieve their dreams of studying abroad.
+            With over a decade of experience, we have helped thousands of students achieve their dreams of studying abroad.
           </p>
         </div>
       </section>
@@ -51,7 +53,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-gray-700 mb-4">
-                At First Educational Network was founded in 2015 with a mission to help Nepalese students access quality education abroad. What started as a small office in Kathmandu has now grown into one of Nepal's most trusted educational consultancies.
+                At First Educational Network was founded in 2015 with a mission to help Nepalese students access quality education abroad. What started as a small office in Kathmandu has now grown into one of Nepals most trusted educational consultancies.
               </p>
               <p className="text-gray-700 mb-4">
                 Our founder, having experienced the challenges of studying abroad firsthand, established this consultancy to make the process smoother and more accessible for Nepalese students.
@@ -122,7 +124,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Our Vision</h3>
               <p className="text-gray-700 text-center">
-                To be Nepal's most trusted education consultancy, known for integrity, excellence, and student success.
+                To be Nepals most trusted education consultancy, known for integrity, excellence, and student success.
               </p>
             </div>
           </div>
@@ -180,7 +182,7 @@ export default function About() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-4">End-to-End Support</h3>
-              <p>From university selection to visa approval, we're with you every step of the way.</p>
+              <p>From university selection to visa approval, we are with you every step of the way.</p>
             </div>
           </div>
         </div>

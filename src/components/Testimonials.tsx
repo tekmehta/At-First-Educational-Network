@@ -98,7 +98,7 @@ const Testimonials = () => {
                   transition={{ duration: 0.3 }}
                   className="text-gray-600 text-lg italic mb-6"
                 >
-                  "{testimonials[activeIndex].quote}"
+                  {testimonials[activeIndex].quote}
                 </motion.p>
                 
                 <div className="flex justify-center md:justify-start space-x-4">

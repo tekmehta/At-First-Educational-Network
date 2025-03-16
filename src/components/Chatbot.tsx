@@ -287,7 +287,7 @@ const Chatbot = () => {
             {/* Chat header */}
             <div className="bg-blue-700 text-white p-4">
               <h3 className="font-bold">At First Educational Network</h3>
-              <p className="text-sm text-blue-100">We're here to help with your queries</p>
+              <p className="text-sm text-blue-100">We are here to help with your queries</p>
             </div>
 
             {/* Chat messages */}

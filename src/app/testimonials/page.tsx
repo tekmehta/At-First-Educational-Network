@@ -148,7 +148,7 @@ export default function TestimonialsPage() {
                       <FaQuoteLeft className="text-blue-100 text-6xl absolute top-0 left-0" />
                       <div className="relative z-10 pl-8 pt-6">
                         <p className="text-gray-700 text-lg mb-6 italic">
-                          "{testimonial.longQuote}"
+                        {testimonial.longQuote}
                         </p>
                         
                         <div className="flex items-center">

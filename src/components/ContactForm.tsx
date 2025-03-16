@@ -56,7 +56,7 @@ const ContactForm = () => {
       {isSubmitted ? (
         <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded relative mb-6">
           <strong className="font-bold">Thank you!</strong>
-          <span className="block sm:inline"> Your message has been sent successfully. We'll get back to you soon.</span>
+          <span className="block sm:inline"> Your message has been sent successfully. We will get back to you soon.</span>
         </div>
       ) : null}
 
@@ -156,8 +156,8 @@ const ContactForm = () => {
               >
                 <option value="">Select your education</option>
                 <option value="High School">High School</option>
-                <option value="Bachelor's Degree">Bachelor's Degree</option>
-                <option value="Master's Degree">Master's Degree</option>
+                <option value="Bachelor's Degree">Bachelors Degree</option>
+                <option value="Master's Degree">Masters Degree</option>
                 <option value="PhD">PhD</option>
                 <option value="Other">Other</option>
               </select>

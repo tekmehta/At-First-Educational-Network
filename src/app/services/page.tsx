@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { FaGraduationCap, FaPassport, FaPlane, FaHome, FaFileAlt, FaLanguage, FaMoneyBillWave, FaBriefcase } from "react-icons/fa";
@@ -112,28 +111,30 @@ const services = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Our Services | Study Abroad Consultancy - At First Educational Network",
-  description: "Comprehensive study abroad services including visa assistance, university admissions, test preparation, and scholarship guidance. Expert counseling for UK, Germany, France & Australia education.",
-  keywords: "study abroad services nepal, visa assistance, university admission help, IELTS preparation, scholarship guidance, education counseling, student visa processing, study in UK, study in Germany",
-  alternates: {
-    canonical: "https://www.atfirstedu.com/services"
-  },
-  openGraph: {
-    title: "Complete Study Abroad Services | At First Educational Network",
-    description: "Expert guidance for international education with comprehensive support services and proven success rate.",
-    url: "https://www.atfirstedu.com/services",
-    type: "website",
-    images: [
-      {
-        url: "/services-og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Study Abroad Services"
-      }
-    ]
-  }
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "Our Services | Study Abroad Consultancy - At First Educational Network",
+    description: "Comprehensive study abroad services including visa assistance, university admissions, test preparation, and scholarship guidance. Expert counseling for UK, Germany, France & Australia education.",
+    keywords: "study abroad services nepal, visa assistance, university admission help, IELTS preparation, scholarship guidance, education counseling, student visa processing, study in UK, study in Germany",
+    alternates: {
+      canonical: "https://www.atfirstedu.com/services"
+    },
+    openGraph: {
+      title: "Complete Study Abroad Services | At First Educational Network",
+      description: "Expert guidance for international education with comprehensive support services and proven success rate.",
+      url: "https://www.atfirstedu.com/services",
+      type: "website",
+      images: [
+        {
+          url: "/services-og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Study Abroad Services"
+        }
+      ]
+    }
+  };
+}
 
 export default function ServicesPage() {
   return (

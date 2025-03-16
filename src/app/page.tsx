@@ -7,30 +7,31 @@ import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Script from "next/script";
 
-export const metadata: Metadata = {
-  title: "Best Study Abroad Consultancy in Nepal | At First Educational Network",
-  description: "Top-rated educational consultancy in Nepal with 95% visa success rate. Expert guidance for studying in UK, Germany, France, Australia. Free consultation, visa assistance & scholarship guidance.",
-  keywords: "study abroad consultancy nepal, best education consultancy kathmandu, study in UK from Nepal, study in Germany from Nepal, visa assistance nepal, scholarship guidance, IELTS preparation, university admission nepal, overseas education consultancy",
-  alternates: {
-    canonical: "https://www.atfirstedu.com"
-  },
-  openGraph: {
-    title: "Leading Study Abroad Consultancy in Nepal | At First Educational Network",
-    description: "Your trusted partner for studying abroad. 95% visa success rate, expert guidance, and comprehensive support for international education.",
-    type: "website",
-    url: "https://www.atfirstedu.com",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "At First Educational Network - Study Abroad Consultancy"
-      }
-    ]
-  }
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "At First Educational Network  | Best Study Abroad Consultancy in Nepal",
+    description: "Top-rated educational consultancy in Nepal with 95% visa success rate. Expert guidance for studying in UK, Germany, France, Australia. Free consultation, visa assistance & scholarship guidance.",
+    keywords: "study abroad consultancy nepal, best education consultancy kathmandu, study in UK from Nepal, study in Germany from Nepal, visa assistance nepal, scholarship guidance, IELTS preparation, university admission nepal, overseas education consultancy",
+    alternates: {
+      canonical: "https://www.atfirstedu.com"
+    },
+    openGraph: {
+      title: "Leading Study Abroad Consultancy in Nepal | At First Educational Network",
+      description: "Your trusted partner for studying abroad. 95% visa success rate, expert guidance, and comprehensive support for international education.",
+      type: "website",
+      url: "https://www.atfirstedu.com",
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "At First Educational Network - Study Abroad Consultancy"
+        }
+      ]
+    }
+  };
+}
 
 export default function Home() {
   return (

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -50,8 +49,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <span className="text-2xl font-bold text-blue-700 font-poppins">
-            At First <span className="text-orange-500">Educational</span> Network
+          <span className={`text-2xl font-bold font-poppins ${scrolled ? 'text-blue-700' : 'text-white'}`}>
+            At First <span className={scrolled ? 'text-orange-500' : 'text-orange-300'}>Educational</span> Network
           </span>
         </Link>
 
@@ -61,14 +60,22 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.path}
-              className="text-gray-800 hover:text-blue-700 font-medium transition-colors duration-200"
+              className={`${
+                scrolled 
+                  ? 'text-gray-800 hover:text-blue-700' 
+                  : 'text-white/90 hover:text-white'
+              } font-medium transition-colors duration-200`}
             >
               {link.name}
             </Link>
           ))}
           <Link
             href="/contact"
-            className="bg-blue-700 text-white px-5 py-2 rounded-md hover:bg-blue-800 transition-colors duration-200 font-medium"
+            className={`${
+              scrolled
+                ? 'bg-blue-700 text-white hover:bg-blue-800'
+                : 'bg-white text-blue-700 hover:bg-blue-50'
+            } px-5 py-2 rounded-md transition-colors duration-200 font-medium`}
           >
             Get Started
           </Link>
@@ -76,7 +83,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation Toggle */}
         <button
-          className="md:hidden text-gray-800 focus:outline-none"
+          className={`md:hidden ${scrolled ? 'text-gray-800' : 'text-white'} focus:outline-none`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
